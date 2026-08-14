@@ -1,85 +1,195 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Outnomina. Gestión laboral para empresas: nóminas, contratos y Seguridad Social.">
-  <title>Outnomina | Gestión laboral</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Outnomina | Gestión Laboral</title>
+<meta name="description" content="Outnomina. Gestión de nóminas, Seguridad Social, contratos laborales y asesoramiento laboral para empresas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#063447;--navy2:#092f3d;--lime:#86b91f;--lime2:#9bcf2b;
+  --ink:#173847;--muted:#607681;--soft:#f4f7f5
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.5;padding-bottom:74px}
+a{text-decoration:none;color:inherit}
+.container{width:min(92%,680px);margin:auto}
+
+.promo{background:var(--lime);color:#fff;text-align:center;font-weight:800;padding:9px 12px;font-size:12.5px;line-height:1.35}
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #e7edef}
+.nav{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.logo{width:155px;height:auto;display:block}
+.phone{background:var(--navy);color:#fff;padding:9px 11px;border-radius:8px;font-size:13px;font-weight:800;white-space:nowrap}
+
+.hero{
+  min-height:690px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 38%,rgba(255,255,255,.28) 74%,rgba(255,255,255,0) 100%),
+    url('hero_small.jpg') center bottom/cover no-repeat;
+  padding:42px 0 250px;
+}
+.eyebrow{color:var(--lime);font-weight:800;letter-spacing:1.25px;font-size:12.5px}
+.hero h1{font-size:40px;line-height:1.03;margin:10px 0 16px;color:var(--navy);letter-spacing:-1.5px}
+.hero h1 strong{color:var(--lime)}
+.hero p{font-size:17px;line-height:1.5;margin:0;color:#294957}
+.experience{display:flex;align-items:center;gap:12px;margin:21px 0;font-size:14px;font-weight:600}
+.badge{width:46px;height:46px;border:2px solid var(--lime);border-radius:50%;display:grid;place-items:center;color:var(--lime);font-weight:900;flex:0 0 auto}
+.cta{display:flex;align-items:center;justify-content:center;background:var(--lime);color:#fff;padding:14px 16px;border-radius:9px;font-size:16px;font-weight:800;box-shadow:0 8px 22px rgba(134,185,31,.22);text-align:center}
+.mail{display:block;text-align:center;margin-top:12px;font-size:13px;font-weight:700;color:var(--navy);overflow-wrap:anywhere}
+
+section{padding:54px 0}
+.section-head{text-align:center;margin:0 auto 30px}
+.section-head .eyebrow{display:block;margin-bottom:6px}
+.section-head h2{font-size:30px;line-height:1.12;margin:0;color:var(--navy)}
+.section-head p{font-size:15px;color:var(--muted);margin:10px 0 0}
+
+.services{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.service{background:#fff;padding:20px 15px;text-align:center;border:1px solid #dfe7e8;border-radius:12px;min-height:175px;box-shadow:0 4px 14px rgba(6,52,71,.05)}
+.icon{font-size:28px;color:var(--lime);margin-bottom:10px}
+.service h3{font-size:14px;color:var(--lime);margin:0 0 8px}
+.service p{font-size:12.5px;color:var(--muted);margin:0}
+
+.about{background:var(--soft)}
+.about h2{font-size:30px;color:var(--navy);line-height:1.12;margin:0 0 12px}
+.about h2 strong{color:var(--lime)}
+.about p{color:var(--muted);font-size:15px}
+.points{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+.point{background:#fff;border-radius:11px;padding:16px;border:1px solid #e5eded}
+.point b{display:block;color:var(--navy);font-size:14px;margin-bottom:4px}
+.point span{font-size:12px;color:var(--muted)}
+
+.discount{background:var(--navy);color:#fff}
+.discount h2{font-size:30px;line-height:1.1;margin:0}
+.discount h2 strong{color:var(--lime2)}
+.discount p{font-size:14px;color:#d9e6ea;margin:10px 0 18px}
+.discount .cta{background:var(--lime2)}
+
+.contact{background:linear-gradient(135deg,var(--lime),#a7d43a);color:#fff}
+.contact h2{font-size:30px;line-height:1.1;margin:0 0 7px}
+.contact p{margin:0 0 18px;font-size:15px}
+.contact-info a{display:block;background:rgba(255,255,255,.16);padding:12px 14px;border-radius:9px;margin-top:8px;font-weight:800;overflow-wrap:anywhere}
+
+footer{background:var(--navy2);color:#d7e6e9;padding:34px 0 20px}
+.footer-logo{width:155px;margin-bottom:12px}
+.footer p{margin:0;color:#b8cbd0;font-size:13px}
+.footer-links{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:7px;font-size:13px}
+.copy{border-top:1px solid rgba(255,255,255,.15);margin-top:25px;padding-top:14px;font-size:10.5px;color:#9db4bb;line-height:1.5}
+
+.mobile-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:30;
+  background:#fff;border-top:1px solid #dfe7e8;
+  padding:8px max(10px,env(safe-area-inset-left)) calc(8px + env(safe-area-inset-bottom));
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;
+}
+.mobile-bar a{display:flex;align-items:center;justify-content:center;border-radius:8px;padding:11px 8px;font-size:13px;font-weight:800}
+.mobile-call{background:var(--navy);color:#fff}
+.mobile-mail{background:var(--lime);color:#fff}
+
+@media(min-width:701px){
+  body{padding-bottom:0}
+  .container{width:min(1180px,92%)}
+  .mobile-bar{display:none}
+}
+</style>
 </head>
 <body>
-<header class="top">
-  <div class="nav wrap">
-    <a class="brand" href="#inicio" aria-label="Outnomina">
-      <span class="brand-mark">O</span><span>utnomina</span>
-    </a>
-    <a class="nav-contact" href="tel:+34630584028">Hablemos</a>
+<div class="promo">🎉 Promoción de lanzamiento: <b>25% de descuento durante 6 meses</b> para nuevos clientes.</div>
+
+<header>
+  <div class="container nav">
+    <a href="#inicio"><img class="logo" src="outnomina_logo_movil.jpg" alt="Outnomina Gestión Laboral"></a>
+    <a class="phone" href="tel:+34630584028">☎ 630 584 028</a>
   </div>
 </header>
 
 <main>
 <section id="inicio" class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow">GESTIÓN LABORAL</p>
-      <h1>Tu empresa crece.<br><strong>Nosotros cuidamos tus nóminas.</strong></h1>
-      <p class="lead">Nóminas, contratos y Seguridad Social gestionados con rigor, cercanía y experiencia.</p>
-      <div class="actions">
-        <a class="btn primary" href="mailto:luis.sanchez@outnomina.com?subject=Consulta%20Outnomina">Quiero hablar con Outnomina</a>
-        <a class="btn secondary" href="#servicios">Ver servicios</a>
-      </div>
-      <p class="micro">Experiencia desde 2007 · Gestión laboral para empresas y despachos</p>
+  <div class="container">
+    <div class="eyebrow">GESTIÓN LABORAL PARA EMPRESAS</div>
+    <h1>Tu Payroll.<br><strong>Nuestro trabajo.</strong></h1>
+    <p>Nos ocupamos de tus nóminas y de tu gestión laboral para que tú puedas centrarte en lo que realmente importa: <b>tu empresa.</b></p>
+    <div class="experience"><div class="badge">30</div><div><strong>Más de 30 años</strong><br>de experiencia en Payroll y gestión laboral.</div></div>
+    <a class="cta" href="tel:+34630584028">☎ &nbsp;Hablemos de tu Payroll</a>
+    <a class="mail" href="mailto:luis.sanchez@outnomina.com">✉ luis.sanchez@outnomina.com</a>
+    <a class="mail" href="https://wa.me/34630584028" target="_blank" rel="noopener">💬 WhatsApp: 630 584 028</a>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">SERVICIOS</span>
+      <h2>Gestión laboral integral para empresas</h2>
+      <p>Un único interlocutor para que tu gestión laboral sea precisa, puntual y sin complicaciones.</p>
     </div>
-    <div class="hero-card">
-      <div class="card-top">OUTNOMINA</div>
-      <div class="card-title">Gestión laboral<br>sin complicaciones.</div>
-      <div class="line"></div>
-      <div class="card-small">Precisión · Cumplimiento · Tranquilidad</div>
+    <div class="services">
+      <div class="service"><div class="icon">▣</div><h3>NÓMINAS</h3><p>Elaboración precisa y puntual de nóminas y boletines.</p></div>
+      <div class="service"><div class="icon">◎</div><h3>SEGURIDAD SOCIAL</h3><p>Altas, bajas y gestión de la Seguridad Social.</p></div>
+      <div class="service"><div class="icon">✎</div><h3>CONTRATOS LABORALES</h3><p>Redacción y gestión de contratos adaptados a la normativa.</p></div>
+      <div class="service"><div class="icon">▤</div><h3>ATRASOS SALARIALES</h3><p>Cálculo y regularización de atrasos salariales.</p></div>
+      <div class="service"><div class="icon">▥</div><h3>ACTUALIZACIÓN DE CONVENIOS</h3><p>Seguimiento y aplicación de convenios colectivos actualizados.</p></div>
+      <div class="service"><div class="icon">◌</div><h3>ASESORAMIENTO LABORAL</h3><p>Asesoramiento cercano y práctico para la toma de decisiones.</p></div>
     </div>
   </div>
 </section>
 
-<section id="servicios" class="section">
-  <div class="wrap">
-    <p class="eyebrow">QUÉ HACEMOS</p>
-    <h2>La parte laboral, bajo control.</h2>
-    <div class="cards">
-      <article><span>01</span><h3>Nóminas</h3><p>Preparación y revisión de nóminas con atención al detalle y a los cambios normativos.</p></article>
-      <article><span>02</span><h3>Contratos</h3><p>Altas, bajas, contratos, modificaciones y gestión documental de tus trabajadores.</p></article>
-      <article><span>03</span><h3>Seguridad Social</h3><p>Gestión de cotizaciones y trámites para que tu empresa cumpla en plazo.</p></article>
-      <article><span>04</span><h3>Asesoramiento</h3><p>Un profesional que entiende Payroll y te ayuda a tomar decisiones laborales con seguridad.</p></article>
+<section id="outnomina" class="about">
+  <div class="container">
+    <span class="eyebrow">OUTNOMINA</span>
+    <h2>Más de <strong>30 años</strong> haciendo Payroll.</h2>
+    <p>Experiencia, cercanía y conocimiento de la gestión laboral para empresas de Barcelona y alrededores.</p>
+    <p><b>No somos una web de nóminas. Somos las personas que están detrás de ellas.</b></p>
+    <div class="points">
+      <div class="point"><b>Experiencia</b><span>Más de 30 años dedicados a Payroll.</span></div>
+      <div class="point"><b>Trato directo</b><span>Un interlocutor que conoce tu empresa.</span></div>
+      <div class="point"><b>Rigor</b><span>Puntualidad y atención al detalle.</span></div>
+      <div class="point"><b>Confidencialidad</b><span>Cuidamos la información sensible.</span></div>
+      <div class="point"><b>Barcelona</b><span>Empresas de Barcelona y alrededores.</span></div>
+      <div class="point"><b>Compromiso</b><span>Tu tranquilidad también forma parte del trabajo.</span></div>
     </div>
   </div>
 </section>
 
-<section class="section soft">
-  <div class="wrap split">
-    <div>
-      <p class="eyebrow">POR QUÉ OUTNOMINA</p>
-      <h2>Porque una nómina no es solo una nómina.</h2>
-    </div>
-    <div>
-      <p>Detrás de cada nómina hay personas, convenios, cotizaciones, contratos y muchas decisiones que deben estar bien hechas.</p>
-      <p><strong>Outnomina aporta experiencia y tranquilidad</strong> para que tú puedas concentrarte en tu negocio.</p>
-    </div>
+<section class="discount">
+  <div class="container">
+    <h2>Empieza con <strong>25% de descuento.</strong></h2>
+    <p>Promoción para nuevos clientes durante los primeros 6 meses.</p>
+    <a class="cta" href="tel:+34630584028">Quiero aprovechar la promoción</a>
   </div>
 </section>
 
 <section id="contacto" class="contact">
-  <div class="wrap">
-    <p class="eyebrow">HABLEMOS</p>
-    <h2>¿Necesitas que tu gestión laboral funcione mejor?</h2>
-    <p>Cuéntame qué necesitas y vemos cómo puedo ayudarte.</p>
-    <a class="btn primary big" href="mailto:luis.sanchez@outnomina.com?subject=Consulta%20Outnomina">luis.sanchez@outnomina.com</a>
-    <p class="micro">Outnomina · Gestión laboral</p>
+  <div class="container">
+    <h2>¿Hablamos de tu Payroll?</h2>
+    <p>Cuéntame cómo gestionas hoy tus nóminas y vemos cómo puedo ayudarte.</p>
+    <div class="contact-info">
+      <a href="tel:+34630584028">☎ 630 584 028</a>
+      <a href="mailto:luis.sanchez@outnomina.com">✉ luis.sanchez@outnomina.com</a>
+      <a href="https://wa.me/34630584028" target="_blank" rel="noopener">💬 WhatsApp: 630 584 028</a>
+    </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="wrap footer-inner">
-    <span>© Outnomina</span><span>GESTIÓN LABORAL</span>
+  <div class="container">
+    <img class="footer-logo" src="outnomina_logo_movil.jpg" alt="Outnomina Gestión Laboral">
+    <p>Gestión de nóminas y administración laboral para empresas.</p>
+    <div class="footer-links">
+      <a href="#inicio">Inicio</a><a href="#servicios">Servicios</a>
+      <a href="#outnomina">Sobre Outnomina</a><a href="#contacto">Contacto</a>
+    </div>
+    <div class="copy"><b>Outnomina Servicios de Gestión S.L.P.U.</b> · CIF B64400823 · Barberá del Vallés, Barcelona.<br>© 2026 Outnomina · Gestión Laboral</div>
   </div>
 </footer>
+
+<div class="mobile-bar">
+  <a class="mobile-call" href="tel:+34630584028">☎ Llamar</a>
+  <a class="mobile-mail" href="mailto:luis.sanchez@outnomina.com">✉ Escribir</a>
+</div>
 </body>
 </html>
