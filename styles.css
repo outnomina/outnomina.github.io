@@ -79,7 +79,7 @@ header.site{
   display:flex;align-items:center;justify-content:space-between;
   padding:14px 24px;max-width:var(--maxw);margin:0 auto;gap:20px;
 }
-.logo img{height:44px;width:auto;}
+.logo img{height:48px;width:auto;}
 nav.main-nav{display:flex;gap:26px;align-items:center;}
 nav.main-nav a{
   text-decoration:none;color:var(--petroleo);font-size:14.5px;font-weight:500;
@@ -239,15 +239,24 @@ footer.site li{margin-bottom:8px;}
 .btn:hover{transform:translateY(-1px);box-shadow:0 5px 14px rgba(2,69,80,.12);}
 @media(max-width:560px){
   section{padding:48px 0;}
+  html{scroll-padding-top:76px;}
   .hero{padding:38px 0 28px;}
   .hero-lead{font-size:16.5px;}
   .btn-row .btn{width:100%;text-align:center;}
   .header-inner{padding:11px 18px;}
-  .logo img{height:40px;}
+  .logo img{height:43px;}
   .header-actions .btn{display:none;}
   .hero-stats{gap:16px;margin-top:22px;}
   .hero-stats div{max-width:none;width:100%;}
   .svc-card{padding:24px 20px;}
   .promo-block{padding:34px 22px;}
   .contact-grid{gap:28px;}
+  form.lead{padding:22px 18px;}
+  form.lead input[type=text],form.lead input[type=email],form.lead input[type=tel],form.lead textarea{font-size:16px;}
+  .btn{min-height:46px;display:inline-flex;align-items:center;justify-content:center;}
 }
+
+/* Final mobile/accessibility refinements */
+:focus-visible{outline:3px solid var(--verde);outline-offset:3px;}
+[id]{scroll-margin-top:88px;}
+@media(max-width:860px){.header-inner{min-height:70px;}}
