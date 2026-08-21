@@ -227,3 +227,27 @@ footer.site li{margin-bottom:8px;}
   border-top:1px solid rgba(255,255,255,.15);padding-top:18px;
   display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#9fbdb8;font-size:12.5px;
 }
+
+
+/* Conversion refinements */
+.hero-lead{font-size:18px;line-height:1.65;max-width:720px;}
+.hero-lead strong{color:var(--petroleo);}
+.svc-card{display:flex;flex-direction:column;}
+.svc-card .btn{align-self:flex-start;margin-top:auto;}
+.hero-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center;}
+.btn{transition:transform .15s ease,box-shadow .15s ease,background .15s ease;}
+.btn:hover{transform:translateY(-1px);box-shadow:0 5px 14px rgba(2,69,80,.12);}
+@media(max-width:560px){
+  section{padding:48px 0;}
+  .hero{padding:38px 0 28px;}
+  .hero-lead{font-size:16.5px;}
+  .btn-row .btn{width:100%;text-align:center;}
+  .header-inner{padding:11px 18px;}
+  .logo img{height:40px;}
+  .header-actions .btn{display:none;}
+  .hero-stats{gap:16px;margin-top:22px;}
+  .hero-stats div{max-width:none;width:100%;}
+  .svc-card{padding:24px 20px;}
+  .promo-block{padding:34px 22px;}
+  .contact-grid{gap:28px;}
+}

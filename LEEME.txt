@@ -1,4 +1,4 @@
-OUTNOMINA.COM — WEB ACTUALIZADA
+OUTNOMINA.COM — VERSIÓN ORIENTADA A CAPTACIÓN
 ================================
 
 QUÉ INCLUYE ESTE PAQUETE
@@ -9,7 +9,7 @@ QUÉ INCLUYE ESTE PAQUETE
 - privacidad.html                -> política de privacidad (RGPD/LOPDGDD), incluye Google Analytics
 - cookies.html                   -> política de cookies, incluye Google Analytics
 - styles.css                    -> estilos compartidos (colores corporativos #024550 y #66B201)
-- script.js                     -> menú móvil + envío del formulario por email (mailto, sin guardar datos)
+- script.js                     -> menú móvil + preparación de consultas por email (mailto, sin guardar datos)
 - assets/outnomina_logo_oficial.png -> tu logo (mismo nombre de archivo que ya usa la web)
 - assets/hero_small.jpg         -> la foto que elegiste (misma nombre de archivo que ya usa la web)
 
@@ -50,3 +50,13 @@ QUÉ REVISAR TRAS PUBLICAR
 - Que el formulario de contacto abra tu aplicación de correo con el mensaje
   ya redactado al pulsar "Enviar consulta".
 - Que en móvil el menú (el icono ☰) se abra y cierre bien.
+
+
+ENFOQUE DE ESTA VERSIÓN
+- Portada orientada a conversión: primero problema/solución y después detalle.
+- Dos recorridos claramente diferenciados: externalización de nóminas y optimización de Payroll.
+- CTA más directos y orientados a conversación, no solo a pedir presupuesto.
+- Mensaje diferencial: optimizar Payroll no implica necesariamente cambiar de programa.
+- Fotografía mantenida en formato cuadrado y sin teléfono/email superpuestos.
+- Domicilio particular no mostrado en portada.
+- El formulario sigue usando mailto porque esta web es estática; para captación profesional conviene sustituirlo posteriormente por un endpoint/formulario externo seguro.
