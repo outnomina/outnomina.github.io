@@ -5,26 +5,36 @@ QUÉ INCLUYE ESTE PAQUETE
 - index.html                    -> nueva home, con las dos líneas de negocio separadas
 - externalizacion-nominas.html  -> página nueva, dirigida a empresas
 - optimizacion-payroll.html     -> página nueva, dirigida a despachos y empresas
+- aviso-legal.html              -> aviso legal con CIF, domicilio y Registro Mercantil
+- privacidad.html                -> política de privacidad (RGPD/LOPDGDD), incluye Google Analytics
+- cookies.html                   -> política de cookies, incluye Google Analytics
 - styles.css                    -> estilos compartidos (colores corporativos #024550 y #66B201)
 - script.js                     -> menú móvil + envío del formulario por email (mailto, sin guardar datos)
 - assets/outnomina_logo_oficial.png -> tu logo (mismo nombre de archivo que ya usa la web)
 - assets/hero_small.jpg         -> la foto que elegiste (misma nombre de archivo que ya usa la web)
 
-IMPORTANTE — NO SE TOCAN ESTOS ARCHIVOS
-Este paquete NO incluye aviso-legal.html, privacidad.html ni cookies.html.
-No tengo el contenido original de esos archivos, así que no los he tocado
-para no arriesgarme a machacar tu texto legal ya existente.
--> Simplemente asegúrate de que esos 3 archivos ya existen en tu repositorio
-   de GitHub con esos mismos nombres (según lo que vi en tu web actual, así es).
-   Las nuevas páginas ya enlazan a ellos correctamente.
+ATENCIÓN — SI NO SE VEN EL LOGO O LA FOTO AL ABRIR EL ZIP
+Tienes que EXTRAER (descomprimir) el zip completo en una carpeta de tu
+ordenador antes de abrir index.html. Si abres el html directamente desde
+dentro del zip sin extraerlo, el navegador no encuentra la carpeta "assets"
+y las imágenes no cargan. Una vez subido a GitHub esto no pasa, porque ahí
+sí se respeta la estructura de carpetas.
+
+AVISO SOBRE LOS TEXTOS LEGALES
+He redactado aviso-legal.html, privacidad.html y cookies.html con tus datos
+(CIF B64400823, domicilio en Calle Navarra 22, Esc B, 3º 2ª, Barberà del
+Vallès, y el uso de Google Analytics). Son plantillas estándar y correctas,
+pero no soy abogado: te recomiendo que alguien con formación jurídica las
+revise antes de publicarlas, sobre todo si en el futuro añades más
+herramientas de terceros (chats, otros analíticos, etc.), que habría que
+incluir también en la política de cookies.
 
 CÓMO SUBIRLO A GITHUB
 1. Ve a tu repositorio en GitHub (el que tienes conectado con IONOS).
-2. Sube estos archivos a la raíz del repositorio:
+2. Sube estos archivos a la raíz del repositorio, sustituyendo los que
+   ya existan con el mismo nombre:
    index.html, externalizacion-nominas.html, optimizacion-payroll.html,
-   styles.css, script.js
-   -> Si ya existe un index.html, este lo sustituye (revisa antes que no
-      tuvieras cambios sin subir).
+   aviso-legal.html, privacidad.html, cookies.html, styles.css, script.js
 3. Sube la carpeta "assets" completa (o si ya tienes una carpeta assets,
    añade dentro los dos archivos: outnomina_logo_oficial.png y hero_small.jpg,
    sustituyendo los que había).
