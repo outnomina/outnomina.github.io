@@ -1,0 +1,42 @@
+OUTNOMINA.COM — WEB ACTUALIZADA
+================================
+
+QUÉ INCLUYE ESTE PAQUETE
+- index.html                    -> nueva home, con las dos líneas de negocio separadas
+- externalizacion-nominas.html  -> página nueva, dirigida a empresas
+- optimizacion-payroll.html     -> página nueva, dirigida a despachos y empresas
+- styles.css                    -> estilos compartidos (colores corporativos #024550 y #66B201)
+- script.js                     -> menú móvil + envío del formulario por email (mailto, sin guardar datos)
+- assets/outnomina_logo_oficial.png -> tu logo (mismo nombre de archivo que ya usa la web)
+- assets/hero_small.jpg         -> la foto que elegiste (misma nombre de archivo que ya usa la web)
+
+IMPORTANTE — NO SE TOCAN ESTOS ARCHIVOS
+Este paquete NO incluye aviso-legal.html, privacidad.html ni cookies.html.
+No tengo el contenido original de esos archivos, así que no los he tocado
+para no arriesgarme a machacar tu texto legal ya existente.
+-> Simplemente asegúrate de que esos 3 archivos ya existen en tu repositorio
+   de GitHub con esos mismos nombres (según lo que vi en tu web actual, así es).
+   Las nuevas páginas ya enlazan a ellos correctamente.
+
+CÓMO SUBIRLO A GITHUB
+1. Ve a tu repositorio en GitHub (el que tienes conectado con IONOS).
+2. Sube estos archivos a la raíz del repositorio:
+   index.html, externalizacion-nominas.html, optimizacion-payroll.html,
+   styles.css, script.js
+   -> Si ya existe un index.html, este lo sustituye (revisa antes que no
+      tuvieras cambios sin subir).
+3. Sube la carpeta "assets" completa (o si ya tienes una carpeta assets,
+   añade dentro los dos archivos: outnomina_logo_oficial.png y hero_small.jpg,
+   sustituyendo los que había).
+4. Espera 1-2 minutos a que GitHub Pages despliegue los cambios y revisa
+   outnomina.com (el dominio de IONOS ya apunta a GitHub, no hace falta
+   tocar nada ahí).
+
+QUÉ REVISAR TRAS PUBLICAR
+- Que el teléfono (630 584 028), el email (luis.sanchez@outnomina.com) y el CIF
+  (B64400823) se vean bien en las 3 páginas.
+- Que el aviso legal, la política de privacidad y la de cookies se abran
+  correctamente desde el pie de página.
+- Que el formulario de contacto abra tu aplicación de correo con el mensaje
+  ya redactado al pulsar "Enviar consulta".
+- Que en móvil el menú (el icono ☰) se abra y cierre bien.
